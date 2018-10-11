@@ -2,7 +2,6 @@
   <div id="app">
     <HelloWorld msg="hello world"/>
     <vuex-app></vuex-app>
-    <vuex-app></vuex-app>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
 	<div>
-		hello world!!!
+		click times:{{clickNum}}
 	</div>
 </template>
 
@@ -14,6 +14,12 @@ export default {
 
     };
   },
+  computed: {
+  	clickNum() {
+  		// console.log(this.$store.state)
+  		return this.$store.state.count
+  	}
+  }
 };
 </script>
 
