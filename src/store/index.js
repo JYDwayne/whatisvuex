@@ -1,33 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 Vue.use(Vuex)
-let dataList = [{
-	name: 'wade',
- 	number: 3
-}, 
-{
-	name: 'harden',
- 	number: 13
-}, {
-	name: 'gorden',
- 	number: 10
-}, {
-	name: 'arizia',
- 	number: 1
-}, {
-	name: 'yao',
- 	number: 11
-}, {
-	name: 'landary',
- 	number: 14
-}]
+
 const store = new Vuex.Store({
   state: {
-    count: 0
+    count: 0,
+    carInfoList: []
   },
   mutations: {
     increment (state, payload) {
     	state.count += payload.number
+    },
+    saveCarlist(state, payload) {
+    	state.carInfoList = payload.carInfoList
     }
   },
   actions: {
@@ -36,6 +21,9 @@ const store = new Vuex.Store({
   		setTimeout(() =>{
   			commit('increment', payload)
   		}, 3000)
+  	},
+  	saveCarlistAsync({commit}, payload) {
+  		commit('increment', payload)
   	}
   }
 })
